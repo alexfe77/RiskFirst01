@@ -1,0 +1,12 @@
+﻿@model GroupViewModel
+
+@foreach (var city in Model.Cities)
+{
+    <h2>@city.First().City</h2>
+    @foreach (var item in city)
+    {
+        <div>
+            @item.Id, @item.FirstName, @item.LastName, @item.StreetAddress, @item.City, @item.Country
+        </div>
+    }
+}
